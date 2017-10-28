@@ -86,7 +86,7 @@ namespace Pub400Demo
     {
       try
       {
-        gvItem.DeleteSelectedRows();
+        gvCountry.DeleteSelectedRows();
       }
       catch (Exception ex)
       {

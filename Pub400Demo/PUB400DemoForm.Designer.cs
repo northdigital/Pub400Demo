@@ -39,12 +39,13 @@
       this.colCustomerFNAME = new DevExpress.XtraGrid.Columns.GridColumn();
       this.colCustomerLNAME = new DevExpress.XtraGrid.Columns.GridColumn();
       this.colCustomerCountry = new DevExpress.XtraGrid.Columns.GridColumn();
+      this.repCountryLookup = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+      this.cOUNTRYBindingSource = new System.Windows.Forms.BindingSource(this.components);
       this.btnSave = new DevExpress.XtraEditors.SimpleButton();
       this.tabCtrlCustomer = new DevExpress.XtraTab.XtraTabControl();
       this.tabPgCountry = new DevExpress.XtraTab.XtraTabPage();
-      this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-      this.cOUNTRYBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+      this.gcCountry = new DevExpress.XtraGrid.GridControl();
+      this.gvCountry = new DevExpress.XtraGrid.Views.Grid.GridView();
       this.colCountryDelete = new DevExpress.XtraGrid.Columns.GridColumn();
       this.repCountryDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
       this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,18 +63,18 @@
       this.customerTableAdapter = new Pub400Demo.PUB400DatasetTableAdapters.CUSTOMERTableAdapter();
       this.itemTableAdapter = new Pub400Demo.PUB400DatasetTableAdapters.ITEMTableAdapter();
       this.cOUNTRYTableAdapter = new Pub400Demo.PUB400DatasetTableAdapters.COUNTRYTableAdapter();
-      this.repCountryLookup = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
       ((System.ComponentModel.ISupportInitialize)(this.gcCustomer)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pUB400Dataset)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.gvCustomer)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.repCustomerDelete)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.repCountryLookup)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.cOUNTRYBindingSource)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.tabCtrlCustomer)).BeginInit();
       this.tabCtrlCustomer.SuspendLayout();
       this.tabPgCountry.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.cOUNTRYBindingSource)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.gcCountry)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.gvCountry)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.repCountryDelete)).BeginInit();
       this.tabPgCustomer.SuspendLayout();
       this.tabPgItem.SuspendLayout();
@@ -81,7 +82,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.iTEMBindingSource)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.gvItem)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.repItemDelete)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.repCountryLookup)).BeginInit();
       this.SuspendLayout();
       // 
       // gcCustomer
@@ -178,6 +178,23 @@
       this.colCustomerCountry.VisibleIndex = 4;
       this.colCustomerCountry.Width = 375;
       // 
+      // repCountryLookup
+      // 
+      this.repCountryLookup.AutoHeight = false;
+      this.repCountryLookup.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+      this.repCountryLookup.DataSource = this.cOUNTRYBindingSource;
+      this.repCountryLookup.DisplayMember = "DESCR";
+      this.repCountryLookup.Name = "repCountryLookup";
+      this.repCountryLookup.NullText = "";
+      this.repCountryLookup.ShowHeader = false;
+      this.repCountryLookup.ValueMember = "ID";
+      // 
+      // cOUNTRYBindingSource
+      // 
+      this.cOUNTRYBindingSource.DataMember = "COUNTRY";
+      this.cOUNTRYBindingSource.DataSource = this.pUB400Dataset;
+      // 
       // btnSave
       // 
       this.btnSave.Location = new System.Drawing.Point(684, 385);
@@ -201,39 +218,34 @@
       // 
       // tabPgCountry
       // 
-      this.tabPgCountry.Controls.Add(this.gridControl1);
+      this.tabPgCountry.Controls.Add(this.gcCountry);
       this.tabPgCountry.Name = "tabPgCountry";
       this.tabPgCountry.Size = new System.Drawing.Size(759, 328);
       this.tabPgCountry.Text = "Country";
       // 
-      // gridControl1
+      // gcCountry
       // 
-      this.gridControl1.DataSource = this.cOUNTRYBindingSource;
-      this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.gridControl1.Location = new System.Drawing.Point(0, 0);
-      this.gridControl1.MainView = this.gridView1;
-      this.gridControl1.Name = "gridControl1";
-      this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+      this.gcCountry.DataSource = this.cOUNTRYBindingSource;
+      this.gcCountry.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.gcCountry.Location = new System.Drawing.Point(0, 0);
+      this.gcCountry.MainView = this.gvCountry;
+      this.gcCountry.Name = "gcCountry";
+      this.gcCountry.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repCountryDelete});
-      this.gridControl1.Size = new System.Drawing.Size(759, 328);
-      this.gridControl1.TabIndex = 1;
-      this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+      this.gcCountry.Size = new System.Drawing.Size(759, 328);
+      this.gcCountry.TabIndex = 1;
+      this.gcCountry.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvCountry});
       // 
-      // cOUNTRYBindingSource
+      // gvCountry
       // 
-      this.cOUNTRYBindingSource.DataMember = "COUNTRY";
-      this.cOUNTRYBindingSource.DataSource = this.pUB400Dataset;
-      // 
-      // gridView1
-      // 
-      this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+      this.gvCountry.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colCountryDelete,
             this.colID,
             this.colDESCR});
-      this.gridView1.GridControl = this.gridControl1;
-      this.gridView1.Name = "gridView1";
-      this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+      this.gvCountry.GridControl = this.gcCountry;
+      this.gvCountry.Name = "gvCountry";
+      this.gvCountry.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
       // 
       // colCountryDelete
       // 
@@ -376,18 +388,6 @@
       // 
       this.cOUNTRYTableAdapter.ClearBeforeFill = true;
       // 
-      // repCountryLookup
-      // 
-      this.repCountryLookup.AutoHeight = false;
-      this.repCountryLookup.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-      this.repCountryLookup.DataSource = this.cOUNTRYBindingSource;
-      this.repCountryLookup.DisplayMember = "DESCR";
-      this.repCountryLookup.Name = "repCountryLookup";
-      this.repCountryLookup.NullText = "";
-      this.repCountryLookup.ShowHeader = false;
-      this.repCountryLookup.ValueMember = "ID";
-      // 
       // PUB400DemoForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,12 +403,13 @@
       ((System.ComponentModel.ISupportInitialize)(this.pUB400Dataset)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.gvCustomer)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.repCustomerDelete)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.repCountryLookup)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.cOUNTRYBindingSource)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.tabCtrlCustomer)).EndInit();
       this.tabCtrlCustomer.ResumeLayout(false);
       this.tabPgCountry.ResumeLayout(false);
-      ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.cOUNTRYBindingSource)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.gcCountry)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.gvCountry)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.repCountryDelete)).EndInit();
       this.tabPgCustomer.ResumeLayout(false);
       this.tabPgItem.ResumeLayout(false);
@@ -416,7 +417,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.iTEMBindingSource)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.gvItem)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.repItemDelete)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.repCountryLookup)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -448,8 +448,8 @@
     private PUB400DatasetTableAdapters.ITEMTableAdapter itemTableAdapter;
     private DevExpress.XtraGrid.Columns.GridColumn colCustomerCountry;
     private DevExpress.XtraTab.XtraTabPage tabPgCountry;
-    private DevExpress.XtraGrid.GridControl gridControl1;
-    private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+    private DevExpress.XtraGrid.GridControl gcCountry;
+    private DevExpress.XtraGrid.Views.Grid.GridView gvCountry;
     private DevExpress.XtraGrid.Columns.GridColumn colCountryDelete;
     private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repCountryDelete;
     private System.Windows.Forms.BindingSource cOUNTRYBindingSource;
