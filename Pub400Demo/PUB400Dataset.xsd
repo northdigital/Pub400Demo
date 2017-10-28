@@ -169,7 +169,7 @@ WHERE        (ID = ?)</CommandText>
   <xs:element name="PUB400Dataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PUB400Dataset" msprop:Generator_UserDSName="PUB400Dataset">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CUSTOMER" msprop:Generator_TableClassName="CUSTOMERDataTable" msprop:Generator_TableVarName="tableCUSTOMER" msprop:Generator_TablePropName="CUSTOMER" msprop:Generator_RowDeletingName="CUSTOMERRowDeleting" msprop:Generator_RowChangingName="CUSTOMERRowChanging" msprop:Generator_RowEvHandlerName="CUSTOMERRowChangeEventHandler" msprop:Generator_RowDeletedName="CUSTOMERRowDeleted" msprop:Generator_UserTableName="CUSTOMER" msprop:Generator_RowChangedName="CUSTOMERRowChanged" msprop:Generator_RowEvArgName="CUSTOMERRowChangeEvent" msprop:Generator_RowClassName="CUSTOMERRow">
+        <xs:element name="CUSTOMER" msprop:Generator_TableClassName="CUSTOMERDataTable" msprop:Generator_TableVarName="tableCUSTOMER" msprop:Generator_RowChangedName="CUSTOMERRowChanged" msprop:Generator_TablePropName="CUSTOMER" msprop:Generator_RowDeletingName="CUSTOMERRowDeleting" msprop:Generator_RowChangingName="CUSTOMERRowChanging" msprop:Generator_RowEvHandlerName="CUSTOMERRowChangeEventHandler" msprop:Generator_RowDeletedName="CUSTOMERRowDeleted" msprop:Generator_RowClassName="CUSTOMERRow" msprop:Generator_UserTableName="CUSTOMER" msprop:Generator_RowEvArgName="CUSTOMERRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
@@ -179,7 +179,7 @@ WHERE        (ID = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ITEM" msprop:Generator_TableClassName="ITEMDataTable" msprop:Generator_TableVarName="tableITEM" msprop:Generator_RowChangedName="ITEMRowChanged" msprop:Generator_TablePropName="ITEM" msprop:Generator_RowDeletingName="ITEMRowDeleting" msprop:Generator_RowChangingName="ITEMRowChanging" msprop:Generator_RowEvHandlerName="ITEMRowChangeEventHandler" msprop:Generator_RowDeletedName="ITEMRowDeleted" msprop:Generator_RowClassName="ITEMRow" msprop:Generator_UserTableName="ITEM" msprop:Generator_RowEvArgName="ITEMRowChangeEvent">
+        <xs:element name="ITEM" msprop:Generator_TableClassName="ITEMDataTable" msprop:Generator_TableVarName="tableITEM" msprop:Generator_TablePropName="ITEM" msprop:Generator_RowDeletingName="ITEMRowDeleting" msprop:Generator_RowChangingName="ITEMRowChanging" msprop:Generator_RowEvHandlerName="ITEMRowChangeEventHandler" msprop:Generator_RowDeletedName="ITEMRowDeleted" msprop:Generator_UserTableName="ITEM" msprop:Generator_RowChangedName="ITEMRowChanged" msprop:Generator_RowEvArgName="ITEMRowChangeEvent" msprop:Generator_RowClassName="ITEMRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
@@ -188,11 +188,11 @@ WHERE        (ID = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="COUNTRY" msprop:Generator_TableClassName="COUNTRYDataTable" msprop:Generator_TableVarName="tableCOUNTRY" msprop:Generator_TablePropName="COUNTRY" msprop:Generator_RowDeletingName="COUNTRYRowDeleting" msprop:Generator_RowChangingName="COUNTRYRowChanging" msprop:Generator_RowEvHandlerName="COUNTRYRowChangeEventHandler" msprop:Generator_RowDeletedName="COUNTRYRowDeleted" msprop:Generator_UserTableName="COUNTRY" msprop:Generator_RowChangedName="COUNTRYRowChanged" msprop:Generator_RowEvArgName="COUNTRYRowChangeEvent" msprop:Generator_RowClassName="COUNTRYRow">
+        <xs:element name="COUNTRY" msprop:Generator_TableClassName="COUNTRYDataTable" msprop:Generator_TableVarName="tableCOUNTRY" msprop:Generator_RowChangedName="COUNTRYRowChanged" msprop:Generator_TablePropName="COUNTRY" msprop:Generator_RowDeletingName="COUNTRYRowDeleting" msprop:Generator_RowChangingName="COUNTRYRowChanging" msprop:Generator_RowEvHandlerName="COUNTRYRowChangeEventHandler" msprop:Generator_RowDeletedName="COUNTRYRowDeleted" msprop:Generator_RowClassName="COUNTRYRow" msprop:Generator_UserTableName="COUNTRY" msprop:Generator_RowEvArgName="COUNTRYRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" minOccurs="0" />
-              <xs:element name="DESCR" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDESCR" msprop:Generator_ColumnPropNameInRow="DESCR" msprop:Generator_ColumnPropNameInTable="DESCRColumn" msprop:Generator_UserColumnName="DESCR" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
+              <xs:element name="DESCR" msprop:Generator_ColumnVarNameInTable="columnDESCR" msprop:Generator_ColumnPropNameInRow="DESCR" msprop:Generator_ColumnPropNameInTable="DESCRColumn" msprop:Generator_UserColumnName="DESCR" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

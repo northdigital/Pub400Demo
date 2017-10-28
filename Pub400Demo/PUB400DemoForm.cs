@@ -17,6 +17,7 @@ namespace Pub400Demo
         Cursor = Cursors.WaitCursor;
         customerTableAdapter.Fill(pUB400Dataset.CUSTOMER);
         itemTableAdapter.Fill(pUB400Dataset.ITEM);
+        cOUNTRYTableAdapter.Fill(pUB400Dataset.COUNTRY);
       }
       catch (Exception ex)
       {
@@ -34,7 +35,10 @@ namespace Pub400Demo
       {
         Cursor = Cursors.WaitCursor;
         customerTableAdapter.Update(pUB400Dataset.CUSTOMER);
-        itemTableAdapter.Update(pUB400Dataset.ITEM);        
+        itemTableAdapter.Update(pUB400Dataset.ITEM);
+        cOUNTRYTableAdapter.Update(pUB400Dataset.COUNTRY);
+
+        MessageBox.Show("Succesfuly saved changes.");
       }
       catch (Exception ex)
       {
@@ -63,6 +67,22 @@ namespace Pub400Demo
     }
 
     private void repItemDelete_Click(object sender, EventArgs e)
+    {
+      try
+      {
+        gvItem.DeleteSelectedRows();
+      }
+      catch (Exception ex)
+      {
+        MessageBox.Show(ex.Message);
+      }
+      finally
+      {
+        Cursor = Cursors.Default;
+      }
+    }
+
+    private void repCountryDelete_Click(object sender, EventArgs e)
     {
       try
       {
